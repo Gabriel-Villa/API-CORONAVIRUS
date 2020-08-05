@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.pos {
+  position: relative;
+  margin: 0 auto;
+}
+
+.down-arrow {
+    height: 60px;
+    width: 60px;
+    border: 4px solid #fff;
+    border-radius: 100%;
+}
+
+.down-arrow:before,
+.down-arrow:after {
+  content: "";
+  position: absolute;
+  top: 26px;
+  width: 18px;
+  border: 2px solid #fff;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}
+
+
+
+.down-arrow:before {
+    transform: rotateZ(45deg);
+    -webkit-transform: rotateZ(45deg);
+    left: 9px;
+}
+
+.down-arrow:after {
+    transform: rotateZ(-45deg);
+    -webkit-transform: rotateZ(-45deg);
+    left: 22px;
+}
+
+.down-arrow:hover {
+    cursor: pointer;
+    border-width: 0;
+}
+
+.down-arrow:hover:before,
+.down-arrow:hover:after {
+    top: 40px;
+}
+
+.down-arrow:hover:before {
+    left: 13px;
+}
+
+.down-arrow:hover:after {
+    left: 26px;
+}
+
+
+  
+/*-- ANIMATIONS --*/
+
+@keyframes fly {
+  0% {
+    transform: translate(0%, -46%);
+  }
+  50% {
+    transform: translate(0%, -54%);
+  }
+  100% {
+    transform: translate(0%, -46%);
+  }
+}
+
+/*--- HEADER ---*/
+
+.nav-header {
+  background-image: url("../header.webp");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+}
+
+.nav-header .content {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.nav-header .content h1 {
+  color: white;
+  font-size: 80px;
+  animation: fly 4s ease-in-out infinite;
+}
+
+.nav-header .content p {
+  color: white;
+  font-size: 30px;
+  animation: fly 4s ease-in-out infinite;
+}
+
+
+/* --- MENSAJE --- */ 
+
+.message{
+    background: #fff;
+    margin-top: 200px;
+    height: 300px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-flow:  column nowrap;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 40px;
+    margin-top: 70px;
+}
+
+
+.message h1{    
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 60px;
+    letter-spacing: 2px;
+}
+
+.message .btns{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+
+
+
+/*--- COUNTRIES ---*/
+
+.countries{
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 2px;
+  justify-content: space-between;
+}
+
+.countries button{
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    background: white;
+    border-radius: .5em;
+    text-transform: uppercase;
+    padding: 1em 4em; 
+    color: black;
+    box-shadow: 0 2px 5px rgba(0,0,0,.3);
+    border: none;
+    margin: 0.4em 1em; 
+    cursor: pointer;
+    outline: 0;
+}
+
+
+.countries button:hover  {
+  background: #82a467;
+  color: white;
+}
+
+
+/* -- TABLE --*/
+.outer-container {
+  background: #1c223b;
+  box-shadow: 0 5px 10px rgba(12,16,31,0.4);
+  padding: 6.25rem;
+  margin: 10px auto;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+
+.outer-container .container-table{
+  background-color: #273349;
+  margin: 0px auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+table{
+  width: 90%;
+  border-collapse: separate;
+  border-spacing: 2px;
+  height: 90%;
+  padding: 50px;
+}
+
+table th {
+  font-size: 1rem;
+}
+table th, table td {
+  padding: 0.9375rem;
+  text-align: left;
+}
+table tbody tr {
+  background-color: #1c223b;
+}
+table tbody tr:hover {
+  background-color: #151b31;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
+table tbody tr td:first-of-type {
+  border-top-left-radius: 0.3125rem;
+  border-bottom-left-radius: 0.3125rem;
+}
+table tbody tr td:last-of-type {
+  border-top-right-radius: 0.3125rem;
+  border-bottom-right-radius: 0.3125rem;
+  text-align: center;
+}
+
+table tbody tr.data td:first-of-type {
+  border-left: 0.3125rem solid #4480e7;
+}
+
